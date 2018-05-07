@@ -12,7 +12,7 @@ import junit.framework.Assert;
 public class StepDef {
 	@Given("^User is in Flipart WebPage$")
 	public void user_is_in_Flipart_WebPage() throws Throwable {
-		Utilities.browserOpen();
+		//Utilities.browserOpen();
 		Utilities.launchURL("https://www.flipkart.com/");
 		try{
 			Utilities.driver.findElement(By.xpath("//*[text() = '✕']")).click();
@@ -31,7 +31,7 @@ public class StepDef {
 	public void user_verifies_whether_that_item_is_in_the_cart() throws Throwable {
 		Assert.assertTrue(FlipKartAutomationPages.verifyItemInCart());
 		System.out.println("The item has been successfully verified");
-		Utilities.browserClose();
+		//Utilities.browserClose();
 	}
 
 }

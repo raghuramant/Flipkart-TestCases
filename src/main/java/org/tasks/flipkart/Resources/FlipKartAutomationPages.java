@@ -45,5 +45,13 @@ public class FlipKartAutomationPages extends Utilities {
 		return textDisplayed;
 		
 	}
+	
+	public static boolean verifyListOfItemsInCart(int ref){
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement linkTextElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[2]/div["+ref +"]/div[1]/div[1]/div[1]/a")));
+		boolean textDisplayed = linkTextElement.isDisplayed();
+		return textDisplayed;
+		
+	}
 
 }
